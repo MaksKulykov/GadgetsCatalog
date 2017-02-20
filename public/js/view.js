@@ -40,11 +40,11 @@ const HIDE = "none";
         },
 
         getPopular : function () {
-            var pop = this.DOMElements.popular.value;
+            let pop = this.DOMElements.popular.value;
             if ( pop == "да"){
-                return "Модель популярна";
+                return true;
             } else if ( pop == "нет"){
-                return "Модель не популярна";
+                return false;
             } else {
                 this.showHideElements([this.DOMElements.error], SHOW);
             }
@@ -68,7 +68,7 @@ const HIDE = "none";
         },
 
         editElement :function (event) {
-            var element = this.getForm();
+            let element = this.getForm();
             this.eventHolder.trigger(event, [element]);
             this.cleanForm();
             this.showHideElements([this.DOMElements.btnAdd, this.DOMElements.headerAdd], SHOW);
