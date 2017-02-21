@@ -60,3 +60,8 @@ div[data-class="btnEdit"] {
 	margin-top: 60px;
 }
 
+#fixed {
+	position: fixed;
+	right: 170px;
+}
+
